@@ -1,0 +1,173 @@
+" _vimrc file
+"
+"
+"
+"
+set nocompatible
+" source $VIMRUNTIME/vimrc_example.vim
+" source $VIMRUNTIME/mswin.vim
+behave mswin
+
+" When started as "evim", evim.vim will already have done these settings.
+if v:progname =~? "evim"
+  finish
+endif
+
+" vim plugins ===================================================
+"
+" vim plugins ===================================================
+
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
+if has("vms")
+  set nobackup		" do not keep a backup file, use versions instead
+else
+  set backup		" keep a backup file
+endif
+
+set nostartofline
+
+" Some information is always good 
+set showfulltag
+set report=0
+
+set shortmess-=aI
+set shortmess+=T
+
+set helpheight=12
+set winminheight=0
+" I want to see some context around
+set scrolloff=2
+set sidescrolloff=5
+" ...and maybe even all around
+" set scrolloff=999
+set sidescroll=15
+" Nice :list or :set list
+set listchars=tab:>-,trail:.,extends:+,eol:$,precedes:+
+
+set fillchars="vert: ,fold:-"
+" Diff options
+set diffopt=filler,context:3
+
+" Always save some info for next time
+set history=2000
+" set viminfo='200,h,%
+set viminfo='200,h
+" Don't save options to session file - it's possibly buggy
+set sessionoptions-=options
+" It's not an MS Word clone
+set secure
+
+filetype plugin indent on			" включение плагинов типа файла и отступов
+runtime macros/matchit.vim
+
+set ch=1				" number of lines used for the command-line
+set nocul					" подсветка строки
+
+" set history=50		" keep 50 lines of command line history
+set ruler				" show the cursor position all the time
+set showcmd				" display incomplete commands
+set incsearch			" do incremental searching
+set nowrapscan			" 
+set scrolloff=1         " number of screen lines to show around the cursor
+
+set foldenable			" fold enable
+" set foldmethod=indent
+
+set laststatus=2		" 0 = never a status line; 2 = always a status line; 
+                        " 1 = status line if there is more than one window
+
+set nowrap				" long lines (no)wrap
+set hidden
+set vb                	" visual bell enable
+
+" russian config
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0
+
+" autoreread file if it has changed outside
+set autoread
+
+" set matchpairs=(:),{:},[:],":",':',<:>
+set showmatch
+
+" set lisp				" enable lisp mode
+set si                " enable smart indent
+
+set ts=4
+set sw=4
+" set numberwidth=7
+
+set linebreak			"включение симпатичного переноса строк
+
+set ignorecase
+
+set fenc=""
+set fencs=""
+
+set showtabline=1		" отображение закладок при открытии 2-х и более файлов ?
+
+map <Leader>h :set hlsearch<CR>          " вкл. подсветки поиска
+map <Leader>nh :set nohlsearch<CR>       " откл. подсветки поиска	
+
+map <Leader>n :set number<CR>            " вкл. нумерацию строк
+map <Leader>nn :set nonumber<CR>         " откл. нумерацию строк
+
+noremap <C-J> <C-W>j
+noremap <C-K> <C-W>k
+noremap <C-H> <C-W>h
+noremap <C-L> <C-W>l
+
+" ------------------------------------
+"  перемещение между буферами
+"
+noremap <C-TAB> :bnext<CR>:redraw<CR>
+noremap <C-S-TAB> :bprevious<CR>:redraw<CR>
+
+" ------------------------------------
+"  перемещение по истории команд
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
+" ------------------------------------
+" search for visually highlighted text
+vmap // y/<C-R>"<CR>
+
+set statusline=%F%m%w%r\%=[%{&fenc}\|%{&ff}\|%Y\|%04l,%04v\|%p%%]
+
+""""""""""""""""""""""""""""""""""""""""""""
+" mydiff
+"
+set diffexpr=MyDiff()
+
+function MyDiff()
+   let opt = ""
+   if &diffopt =~ "icase"
+     let opt = opt . "-i "
+   endif
+   if &diffopt =~ "iwhite"
+     let opt = opt . "-b "
+   endif
+   " silent execute "!diff -a --binary " . opt . v:fname_in . " " . v:fname_new .
+	" \  " > " . v:fname_out
+   silent execute '!"'.$VIMRUNTIME.'\diff" -a ' . opt . v:fname_in . ' ' . v:fname_new . ' > ' . v:fname_out
+endfunction
+""""""""""""""""""""""""""""""""""""""""""""
+set wildmenu
+" set wildmode=list,full		" выводит весь список вариантов
+
+set wcm=<Tab>
+
+menu MyMenu.Encoding.koi8-r       :e ++enc=KOI8-R<CR>
+menu MyMenu.Encoding.windows-1251 :e ++enc=cp1251<CR>
+menu MyMenu.Encoding.cp866        :e ++enc=cp866<CR>
+menu MyMenu.Encoding.utf-8        :e ++enc=utf-8 <CR>
+menu MyMenu.Insert.LastChangeDate	msHmtgg/[Ll]ast[Cc]hange:\s*/e+1<CR>"_D"=strftime("%d %b %Y %X")<CR>p'tzt`s
+menu MyMenu.Insert.ThisFileName		msHmtgg/[Ff]ile:\s*/e+1<CR>"_D"=expand("%:p")<CR>p'tzt`s
+menu MyMenu.ClearSpaces ms:%s/\s\+$//e<CR>'s
+
+map <F8>	:emenu MyMenu.<TAB>
+
+" -------------------------------------------------------------------------------
