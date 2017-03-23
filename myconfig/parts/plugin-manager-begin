@@ -66,13 +66,20 @@
 """ let &runtimepath .= ',' . expand(vimDir . '/bundle/Vundle.vim')
 """ call vundle#rc(expand(vimDir . '/bundle'))
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let win_shell = (has('win32') || has('win64')) && &shellcmdflag =~ '/'
-let vimDir = win_shell ? '$HOME/vimfiles' : '$HOME/.vim'
-let &runtimepath .= ',' . expand(vimDir . '/bundle/Vundle.vim')
+if (has('win32') || has('win64'))
+	set rtp+=~/vimfiles/bundle/Vundle.vim/
+else
+	set rtp+=~/.vim/bundle/Vundle.vim
+endif
 
 set nocompatible
 filetype off
-call vundle#begin()
+
+if (has('win32') || has('win64'))
+	call vundle#begin('$HOME/vimfiles/bundle/')
+else
+	call vundle#begin()
+endif
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'

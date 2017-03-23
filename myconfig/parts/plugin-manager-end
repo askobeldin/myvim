@@ -1,4 +1,4 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " All of your Plugins must be added before the following line
 call vundle#end()
-"? call vundle#rc(expand(vimDir . '/bundle'))
+""""? call vundle#rc(expand(vimDir . '/bundle'))
