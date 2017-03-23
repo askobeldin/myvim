@@ -1,0 +1,8 @@
+" plugins list
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NerdTree
+Plugin 'scrooloose/nerdtree'
+
+" vim-scripts/mru
+Plugin 'vim-scripts/mru.vim'
+

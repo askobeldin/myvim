@@ -1,0 +1,12 @@
+# vimrc file for windows
+#
+# mswin
+plugin-manager-begin
+plugins
+plugin-manager-end
+common
+statusline
+menu
+mappings
+leader-keys
+functions

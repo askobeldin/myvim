@@ -1,0 +1,22 @@
+map <F8>	:emenu MyMenu.<TAB>
+
+noremap <C-J> <C-W>j
+noremap <C-K> <C-W>k
+noremap <C-H> <C-W>h
+noremap <C-L> <C-W>l
+
+" ------------------------------------
+"  перемещение между буферами
+"
+noremap <C-TAB> :bnext<CR>:redraw<CR>
+noremap <C-S-TAB> :bprevious<CR>:redraw<CR>
+
+" ------------------------------------
+"  перемещение по истории команд
+" cnoremap <C-p> <Up>
+" cnoremap <C-n> <Down>
+
+" ------------------------------------
+" search for visually highlighted text
+vmap // y/<C-R>"<CR>
+

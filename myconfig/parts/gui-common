@@ -1,0 +1,22 @@
+if has("gui")
+    set guioptions+=aghre
+    set guioptions-=T       " no toolbar
+    set guioptions-=m       " no menu
+    set guioptions-=r       " no right scrollbar
+    set guioptions-=R       " no right scrollbar
+    set guioptions-=l       " no left scrollbar
+    set guioptions-=L       " no left scrollbar
+    set guipty
+
+    set guifont=Liberation_Mono:h10:cRUSSIAN
+
+    set guitablabel=%N\ %f
+
+    winpos 0 0 
+    set lines=84			" количество строк 
+    set columns=110			" количество столбцов
+
+    colorscheme oceandeep3
+
+endif
+

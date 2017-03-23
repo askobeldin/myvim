@@ -1,0 +1,140 @@
+filetype plugin indent on			" включение плагинов типа файла и отступов
+runtime macros/matchit.vim
+
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
+if has("vms")
+  set nobackup		" do not keep a backup file, use versions instead
+else
+  set backup		" keep a backup file
+endif
+
+set nostartofline
+
+" Some information is always good 
+set showfulltag
+set report=0
+
+set shortmess-=aI
+set shortmess+=T
+
+set helpheight=12
+set winminheight=0
+" I want to see some context around
+set scrolloff=2
+set sidescrolloff=5
+" ...and maybe even all around
+" set scrolloff=999
+set sidescroll=15
+" Nice :list or :set list
+set listchars=tab:>-,trail:.,extends:+,eol:$,precedes:+
+
+set fillchars="vert: ,fold:-"
+" Diff options
+set diffopt=filler,context:3
+
+" Always save some info for next time
+set history=2000
+" set viminfo='200,h,%
+set viminfo='200,h
+" Don't save options to session file - it's possibly buggy
+set sessionoptions-=options
+" It's not an MS Word clone
+set secure
+
+set ch=1				" number of lines used for the command-line
+set nocul					" подсветка строки
+
+" set history=50		" keep 50 lines of command line history
+set ruler				" show the cursor position all the time
+set showcmd				" display incomplete commands
+set incsearch			" do incremental searching
+set nowrapscan			" 
+set scrolloff=1         " number of screen lines to show around the cursor
+
+set foldenable			" fold enable
+" set foldmethod=indent
+
+set laststatus=2		" 0 = never a status line; 2 = always a status line; 
+                        " 1 = status line if there is more than one window
+
+set nowrap				" long lines (no)wrap
+set hidden
+set vb                	" visual bell enable
+
+" russian config
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0
+
+" autoreread file if it has changed outside
+set autoread
+
+" set matchpairs=(:),{:},[:],":",':',<:>
+set showmatch
+
+" set lisp				" enable lisp mode
+set si                " enable smart indent
+
+set ts=4
+set sw=4
+" set numberwidth=7
+
+set linebreak			"включение симпатичного переноса строк
+
+set ignorecase
+
+set fenc=""
+set fencs=""
+
+set showtabline=1		" отображение закладок при открытии 2-х и более файлов ?
+
+
+" For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
+" let &guioptions = substitute(&guioptions, "t", "", "g")
+
+" Don't use Ex mode, use Q for formatting
+map Q gq
+
+" This is an alternative that also works in block mode, but the deleted
+" text is lost and it only works for putting the current register.
+"vnoremap p "_dp
+
+" Switch syntax highlighting on, when the terminal has colors
+" Also switch on highlighting the last used search pattern.
+if &t_Co > 2 || has("gui_running")
+  syntax on
+  set hlsearch
+endif
+
+" Only do this part when compiled with support for autocommands.
+if has("autocmd")
+
+  " Enable file type detection.
+  " Use the default filetype settings, so that mail gets 'tw' set to 72,
+  " 'cindent' is on in C files, etc.
+  " Also load indent files, to automatically do language-dependent indenting.
+  filetype plugin indent on
+
+  " Put these in an autocmd group, so that we can delete them easily.
+  augroup vimrcEx
+  au!
+
+  " For all text files set 'textwidth' to 80 characters.
+  autocmd FileType text setlocal textwidth=80
+
+  " When editing a file, always jump to the last known cursor position.
+  " Don't do it when the position is invalid or when inside an event handler
+  " (happens when dropping a file on gvim).
+  autocmd BufReadPost *
+    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exe "normal g`\"" |
+    \ endif
+
+  augroup END
+
+else
+  set autoindent		" always set autoindenting on
+endif
+
