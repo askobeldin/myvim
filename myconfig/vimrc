@@ -10,3 +10,4 @@ menu
 mappings
 leader-keys
 functions
+augroups
