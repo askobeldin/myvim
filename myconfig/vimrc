@@ -1,6 +1,7 @@
 # vimrc file for windows
 #
 # mswin
+variables
 plugin-manager-begin
 plugins
 plugin-manager-end
