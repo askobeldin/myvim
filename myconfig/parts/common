@@ -10,6 +10,12 @@ else
   set backup		" keep a backup file
 endif
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" mapleader ?
+"
+let mapleader = ","
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 set nostartofline
 
 " Some information is always good 

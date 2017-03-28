@@ -1,5 +1,7 @@
 map <F8>	:emenu MyMenu.<TAB>
 
+" ------------------------------------
+" перемещение между окнами
 noremap <C-J> <C-W>j
 noremap <C-K> <C-W>k
 noremap <C-H> <C-W>h
@@ -13,10 +15,12 @@ noremap <C-S-TAB> :bprevious<CR>:redraw<CR>
 
 " ------------------------------------
 "  перемещение по истории команд
-" cnoremap <C-p> <Up>
-" cnoremap <C-n> <Down>
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
 
 " ------------------------------------
 " search for visually highlighted text
 vmap // y/<C-R>"<CR>
 
+" NERDTtee
+nnoremap <silent> <F9> :NERDTreeToggle<CR>

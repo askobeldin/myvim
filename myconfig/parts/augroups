@@ -1,8 +1,41 @@
-" python file config
+" python files config
 augroup filetype_py
 	autocmd!
 	autocmd BufRead *.py set nosmartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-	autocmd BufNewFile,BufReadPre *.py setlocal fileencoding=utf-8
+	autocmd BufNewFile,BufReadPre *.py setlocal fileencoding=utf-8 fileformat=unix
 	autocmd BufNewFile *.py silent! :execute "0r " . expand(vimDir . '/myheaders/python.header') . "|4"
 augroup END
 
+" html files config
+augroup filetype_html
+	autocmd!
+	autocmd BufNewFile,BufReadPre *.html setlocal fileencoding=utf-8 filetype=html fileformat=unix nowrap
+	autocmd BufNewFile *.html silent! :execute "0r " . expand(vimDir . '/myheaders/html.header') . "|5"
+augroup END
+
+" javascript files config
+augroup filetype_javascript
+	autocmd!
+	autocmd BufNewFile,BufReadPre *.js setlocal fileencoding=utf-8 filetype=javascript fileformat=unix
+augroup END
+
+" json files config
+augroup filetype_json
+	autocmd!
+	autocmd BufNewFile,BufReadPre *.json setlocal fileencoding=utf-8 filetype=json fileformat=unix
+augroup END
+
+" tcl files config
+augroup filetype_tcl
+	autocmd!
+	autocmd BufNewFile,BufReadPre *.tcl setlocal fileencoding=utf-8 filetype=tcl fileformat=unix
+augroup END
+
+" lisp files config
+augroup filetype_lisp
+	autocmd!
+	autocmd BufNewFile,BufReadPre *.lisp setlocal fileencoding=utf-8 filetype=lisp fileformat=unix
+	autocmd BufNewFile,BufReadPre *.cl setlocal fileencoding=utf-8 filetype=lisp fileformat=unix
+	autocmd BufNewFile,BufReadPre *.el setlocal fileencoding=utf-8 filetype=lisp fileformat=unix
+	autocmd BufNewFile,BufReadPre *.lsp setlocal fileencoding=utf-8 filetype=lisp fileformat=unix
+augroup END

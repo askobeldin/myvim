@@ -1,6 +1,6 @@
-map <Leader>h :set hlsearch<CR>          " вкл. подсветки поиска
-map <Leader>nh :set nohlsearch<CR>       " откл. подсветки поиска	
+map <Leader>h :set hlsearch!<CR>          " вкл. подсветки поиска
+" map <Leader>nh :set nohlsearch<CR>       " откл. подсветки поиска	
 
-map <Leader>n :set number<CR>            " вкл. нумерацию строк
-map <Leader>nn :set nonumber<CR>         " откл. нумерацию строк
+map <Leader>n :set number!<CR>            " вкл. нумерацию строк
+" map <Leader>nn :set nonumber<CR>         " откл. нумерацию строк
 

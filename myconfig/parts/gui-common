@@ -13,8 +13,8 @@ if has("gui")
     set guitablabel=%N\ %f
 
     winpos 0 0 
-    set lines=84			" количество строк 
-    set columns=110			" количество столбцов
+    set lines=70			" количество строк 
+    set columns=100			" количество столбцов
 
     colorscheme oceandeep3
 
