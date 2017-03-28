@@ -96,6 +96,8 @@ set fencs=""
 
 set showtabline=1		" отображение закладок при открытии 2-х и более файлов ?
 
+colorscheme delek
+
 
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
