@@ -39,3 +39,10 @@ augroup filetype_lisp
 	autocmd BufNewFile,BufReadPre *.el setlocal fileencoding=utf-8 filetype=lisp fileformat=unix
 	autocmd BufNewFile,BufReadPre *.lsp setlocal fileencoding=utf-8 filetype=lisp fileformat=unix
 augroup END
+
+" long lines highlighting
+augroup longLines
+	autocmd!
+    autocmd BufEnter *.py :match ErrorMsg /\%>79v.\+/                      
+    autocmd BufEnter *.lisp,*.cl,*.el,*.lsp :match ErrorMsg /\%>120v.\+/                      
+augroup END

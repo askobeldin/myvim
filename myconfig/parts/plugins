@@ -6,3 +6,6 @@ Plugin 'scrooloose/nerdtree'
 " vim-scripts/mru
 Plugin 'vim-scripts/mru.vim'
 
+" bufexplorer
+Plugin 'jlanzarotta/bufexplorer'
+

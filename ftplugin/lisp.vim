@@ -4,4 +4,4 @@ set smarttab
 set expandtab
 set softtabstop=4
 set autoindent
-setlocal colorcolumn=100
+" setlocal colorcolumn=100

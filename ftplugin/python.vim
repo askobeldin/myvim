@@ -7,4 +7,4 @@ set autoindent
 setlocal indentkeys=!^F,o,O,<:>,0),0],0},=elif,=except,0#
 set commentstring=\ #\ %s
 " setlocal colorcolumn=80
-match ErrorMsg /\%>79v.\+/
+" match ErrorMsg /\%>79v.\+/
