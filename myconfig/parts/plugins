@@ -9,3 +9,5 @@ Plugin 'vim-scripts/mru.vim'
 " bufexplorer
 Plugin 'jlanzarotta/bufexplorer'
 
+" solarized colortheme
+" Plugin 'altercation/vim-colors-solarized'

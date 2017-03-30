@@ -29,7 +29,7 @@ highlight Folded        gui=bold guibg=#305060 guifg=#b0d0e0
 highlight FoldColumn    gui=bold guibg=#305060 guifg=#b0d0e0
 highlight IncSearch     gui=NONE guifg=black guibg=gold
 highlight LineNr        gui=NONE guibg=#103040 guifg=#507080 
-" highlight ColorColumn   gui=None guibg=#507080 guifg=#103040
+" highlight ColorColumn   gui=bold guibg=grey18 guifg=red
 highlight ColorColumn   gui=bold guibg=#103040 guifg=red
 highlight ModeMsg       guibg=DarkGreen guifg=LightGreen
 highlight MoreMsg       gui=bold  guifg=SeaGreen4 guibg=bg
