@@ -4,3 +4,5 @@ map <Leader>h :set hlsearch!<CR>          " вкл. подсветки поис�
 map <Leader>n :set number!<CR>            " вкл. нумерацию строк
 " map <Leader>nn :set nonumber<CR>         " откл. нумерацию строк
 
+" list mode
+nmap <silent> <leader>lm :set list!<CR>

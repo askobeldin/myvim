@@ -41,8 +41,9 @@ augroup filetype_lisp
 augroup END
 
 " long lines highlighting
-" augroup longLines
-" 	autocmd!
-"     autocmd BufEnter *.py :match ErrorMsg /\%>79v.\+/                      
-"     autocmd BufEnter *.lisp,*.cl,*.el,*.lsp :match ErrorMsg /\%>120v.\+/                      
-" augroup END
+augroup longLines
+    autocmd!
+    autocmd BufEnter * let &colorcolumn=""
+    autocmd BufEnter *.py let &colorcolumn="80"
+    autocmd BufEnter *.lisp,*.cl,*.el,*.lsp let &colorcolumn="101"
+augroup END

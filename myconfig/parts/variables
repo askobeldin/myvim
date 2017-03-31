@@ -1,9 +1,8 @@
 " some useful variables
+" usage:  expand(vimDir . '/path_to_folder_or_file')
 "
 if (has('win32') || has('win64'))
 	let vimDir = '$HOME/vimfiles'
 else
 	let vimDir = '$HOME/.vim'
 endif
-""""""""""""""""
-" expand(vimDir . '/path_to_folder_or_file')
