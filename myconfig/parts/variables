@@ -1,4 +1,4 @@
-" some useful variables
+" Some useful variables
 " usage:  expand(vimDir . '/path_to_folder_or_file')
 "
 if (has('win32') || has('win64'))

@@ -1,6 +1,4 @@
 set wildmenu
-" set wildmode=list,full		" выводит весь список вариантов
-
 set wcm=<Tab>
 
 menu MyMenu.Encoding.koi8-r       :e ++enc=KOI8-R<CR>

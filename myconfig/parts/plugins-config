@@ -1,0 +1,16 @@
+" slimv
+"
+"""""""""""""""""""""""""""
+" Extract and use the 2.18 version of swank/sbcl.lisp until this is fixed
+" either in slime or in sbcl (I mean until your distibution upgrades to a newer
+" version of sbcl). – Tamas Kovacs Mar 18 at 13:12 
+"
+"""""""""""""""""""""""""""
+let g:slimv_impl = 'sbcl'
+
+if (has('win32') || has('win64'))
+	" windows
+else
+	" linux
+	" let g:slimv_swank_cmd = '! xterm -e sbcl --load $HOME/.vim/bundle/slimv/slime/start-swank.lisp &'
+endif

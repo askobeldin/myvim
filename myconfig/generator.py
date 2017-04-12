@@ -33,6 +33,9 @@ def main():
     # process files
     for path in filenames:
         with open(path, 'r', encoding='utf-8') as f:
+            hl1 = 75 * '"'
+            fileheader = hl1 + '\n" part: {}\n"\n' + hl1
+            print(fileheader.format(os.path.basename(path)))
             for textline in f:
                 if not textline.lstrip().startswith('#'):
                     print(textline, end='')

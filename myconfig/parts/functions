@@ -14,5 +14,5 @@ function MyDiff()
 	" \  " > " . v:fname_out
    silent execute '!"'.$VIMRUNTIME.'\diff" -a ' . opt . v:fname_in . ' ' . v:fname_new . ' > ' . v:fname_out
 endfunction
-""""""""""""""""""""""""""""""""""""""""""""
+
 

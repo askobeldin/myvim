@@ -9,9 +9,9 @@ if has("gui")
     set guipty
 
 	if (has('win32') || has('win64'))
-		set guifont=Liberation_Mono:h10:cRUSSIAN
+		set guifont=Liberation_Mono:h11:cRUSSIAN
 	else
-		set guifont=Liberation\ Mono\ 10
+		set guifont=Liberation\ Mono\ 11
 	endif
 
 

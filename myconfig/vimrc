@@ -1,6 +1,7 @@
-# vimrc file for windows
+# vimrc file
 #
 # mswin
+#
 variables
 plugin-manager-begin
 plugins
@@ -12,3 +13,4 @@ mappings
 leader-keys
 functions
 augroups
+plugins-config

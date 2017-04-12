@@ -10,11 +10,8 @@ else
   set backup		" keep a backup file
 endif
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""
-" mapleader ?
-"
+" mapleader 
 let mapleader = ","
-""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set nostartofline
 
@@ -27,37 +24,36 @@ set shortmess+=T
 
 set helpheight=12
 set winminheight=0
+
 " I want to see some context around
 set scrolloff=2
 set sidescrolloff=5
-" ...and maybe even all around
-" set scrolloff=999
 set sidescroll=15
 " Nice :list or :set list
 set listchars=tab:>-,trail:.,extends:+,eol:$,precedes:+
 
 set fillchars="vert: ,fold:-"
+
 " Diff options
 set diffopt=filler,context:3
 
 " Always save some info for next time
 set history=2000
-" set viminfo='200,h,%
 set viminfo='200,h
+
 " Don't save options to session file - it's possibly buggy
 set sessionoptions-=options
+
 " It's not an MS Word clone
 set secure
 
 set ch=1				" number of lines used for the command-line
-set nocul					" подсветка строки
+set nocul				" подсветка строки
 
-" set history=50		" keep 50 lines of command line history
 set ruler				" show the cursor position all the time
 set showcmd				" display incomplete commands
 set incsearch			" do incremental searching
 set nowrapscan			" 
-set scrolloff=1         " number of screen lines to show around the cursor
 
 set foldenable			" fold enable
 " set foldmethod=indent
@@ -67,8 +63,9 @@ set laststatus=2		" 0 = never a status line; 2 = always a status line;
 
 set nowrap				" long lines (no)wrap
 set hidden
-set vb                	" visual bell enable
+set vb					" visual bell enable
 
+""""""""""""""""
 " russian config
 set keymap=russian-jcukenwin
 set iminsert=0
@@ -77,18 +74,13 @@ set imsearch=0
 " autoreread file if it has changed outside
 set autoread
 
-" set matchpairs=(:),{:},[:],":",':',<:>
 set showmatch
-
-" set lisp				" enable lisp mode
 set si                " enable smart indent
 
 set ts=4
 set sw=4
-" set numberwidth=7
 
 set linebreak			"включение симпатичного переноса строк
-
 set ignorecase
 
 set fenc=""
@@ -96,7 +88,7 @@ set fencs=""
 
 set showtabline=1		" отображение закладок при открытии 2-х и более файлов ?
 
-colorscheme delek
+colorscheme desert
 
 
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
