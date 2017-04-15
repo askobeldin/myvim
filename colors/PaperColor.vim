@@ -334,7 +334,8 @@ else " LIGHT VARIANT
   let s:olive   = ['#718c00', '64'] "String
   let s:navy    = ['#005f87', '24'] "StorageClass
 
-  let s:orange  = ['#d75f00', '166'] "Number
+  "let s:orange  = ['#d75f00', '166'] "Number
+  let s:orange  = ['#d75f00', '255'] "Number
   let s:purple  = ['#8959a8', '97'] "Repeat/Conditional
   let s:aqua    = ['#3e999f', '31'] "Operator/Delimiter
 
@@ -435,8 +436,9 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call s:HL("TabLineSel", s:tabline_active_fg, s:tabline_active_bg, "None")
   call s:HL("StatusLine", s:statusline_active_fg, s:statusline_active_bg, "bold")
   call s:HL("StatusLineNC", s:statusline_inactive_fg, s:statusline_inactive_bg, "None")
-  call s:HL("VertSplit", s:divider, s:background, "none")
-  " call s:HL("VertSplit", s:red, s:background, "none")
+  "call s:HL("VertSplit", s:divider, s:background, "none")
+  call s:HL("VertSplit", s:divider, s:statusline_inactive_bg, "none")
+  "call s:HL("VertSplit", s:red, s:background, "none")
   call s:HL("Visual", s:visual_fg, s:visual_bg, "")
   call s:HL("Directory", s:blue, "", "")
   call s:HL("ModeMsg", s:olive, "", "")
