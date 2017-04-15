@@ -9,9 +9,9 @@ if has("gui")
     set guipty
 
 	if (has('win32') || has('win64'))
-		set guifont=Liberation_Mono:h11:cRUSSIAN
+		set guifont=Liberation_Mono:h10:cRUSSIAN
 	else
-		set guifont=Liberation\ Mono\ 11
+		set guifont=Liberation\ Mono\ 10
 	endif
 
 
@@ -21,7 +21,8 @@ if has("gui")
     set lines=70			" количество строк 
     set columns=100			" количество столбцов
 
-    colorscheme oceandeep3
+    " colorscheme oceandeep3
+    colorscheme PaperColor
 
 endif
 
