@@ -22,6 +22,7 @@ if has("gui")
     set columns=100			" количество столбцов
 
     " colorscheme oceandeep3
+	set background=light
     colorscheme PaperColor
 
 endif
