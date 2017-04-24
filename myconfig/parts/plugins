@@ -11,4 +11,7 @@ Plugin 'vim-scripts/mru.vim'
 Plugin 'jlanzarotta/bufexplorer'
 
 " slimv
-Plugin 'kovisoft/slimv'
+" Plugin 'kovisoft/slimv'
+
+" vimwiki
+Plugin 'vimwiki/vimwiki'

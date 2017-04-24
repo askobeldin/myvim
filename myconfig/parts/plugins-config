@@ -14,3 +14,12 @@ else
 	" linux
 	" let g:slimv_swank_cmd = '! xterm -e sbcl --load $HOME/.vim/bundle/slimv/slime/start-swank.lisp &'
 endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vimwiki
+"
+let wiki_win = {}
+let wiki_win.path = 'c:\myinfo\vimwiki\'
+let wiki_win.path_html = 'c:\myinfo\vimwiki\public_html\'
+
+let g:vimwiki_list = [wiki_win,]
