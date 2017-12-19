@@ -37,7 +37,6 @@ augroup filetype_lisp
 	autocmd BufNewFile,BufReadPre *.lisp setlocal fileencoding=utf-8 filetype=lisp fileformat=unix
 	autocmd BufNewFile,BufReadPre *.cl setlocal fileencoding=utf-8 filetype=lisp fileformat=unix
 	autocmd BufNewFile,BufReadPre *.el setlocal fileencoding=utf-8 filetype=lisp fileformat=unix
-	autocmd BufNewFile,BufReadPre *.lsp setlocal fileencoding=utf-8 filetype=lisp fileformat=unix
 augroup END
 
 " long lines highlighting
