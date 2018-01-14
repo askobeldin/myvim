@@ -6,6 +6,13 @@ augroup filetype_py
 	autocmd BufNewFile *.py silent! :execute "0r " . expand(vimDir . '/myheaders/python.header') . "|4"
 augroup END
 
+" perl files config
+augroup filetype_perl
+	autocmd!
+	autocmd BufNewFile,BufReadPre *.pl setlocal fileencoding=utf-8 filetype=perl fileformat=unix
+	autocmd BufNewFile *.pl silent! :execute "0r " . expand(vimDir . '/myheaders/perl.header') . "|10"
+augroup END
+
 " html files config
 augroup filetype_html
 	autocmd!
