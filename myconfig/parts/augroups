@@ -59,3 +59,16 @@ augroup filetype_md
     autocmd!
     autocmd BufNewFile,BufReadPre *.md setlocal fileencoding=utf-8 fileformat=unix
 augroup END
+
+" C files config
+augroup filetype_CC
+    autocmd!
+	autocmd BufNewFile,BufReadPre *.h,*.c setlocal cin fileencoding=utf-8 filetype=c.doxygen fileformat=unix
+	autocmd filetype c setlocal cin filetype=c.doxygen fileencoding=utf-8 fileformat=unix
+augroup END
+
+" make files config
+augroup filetype_make
+    autocmd!
+	autocmd filetype make setlocal nocin noexpandtab fileencoding=utf-8 fileformat=unix
+augroup END

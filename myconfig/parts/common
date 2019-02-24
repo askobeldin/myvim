@@ -10,6 +10,12 @@ else
   set backup		" keep a backup file
 endif
 
+" read .vimrc in local directory
+set exrc
+
+" security for local directory
+set secure
+
 " mapleader 
 let mapleader = ","
 
