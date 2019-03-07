@@ -64,7 +64,7 @@ augroup END
 augroup filetype_CC
     autocmd!
 	autocmd BufNewFile,BufReadPre *.h,*.c setlocal cin fileencoding=utf-8 filetype=c.doxygen fileformat=unix
-	autocmd filetype c setlocal cin filetype=c.doxygen fileencoding=utf-8 fileformat=unix
+	autocmd filetype c setlocal cin filetype=c.doxygen fileencoding=utf-8 fileformat=unix formatprg=astyle
 augroup END
 
 " make files config
