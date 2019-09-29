@@ -18,3 +18,12 @@ Plugin 'vimwiki/vimwiki'
 
 " calendar (modern, with google)
 Plugin 'itchyny/calendar.vim'
+
+" c.vim
+Plugin 'c.vim'
+
+" UltiSnips
+Plugin 'SirVer/ultisnips'
+
+" Doxygen
+Plugin 'DoxygenToolkit.vim'

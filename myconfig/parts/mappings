@@ -18,7 +18,7 @@ cnoremap <C-n> <Down>
 vmap // y/<C-R>"<CR>
 
 " NERDTtee
-nnoremap <silent> <F9> :NERDTreeToggle<CR>
+"""nnoremap <silent> <F9> :NERDTreeToggle<CR>
 
 " Toggles main menu in GUI mode
 map <silent> <F11> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>

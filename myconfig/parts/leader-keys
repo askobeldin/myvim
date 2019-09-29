@@ -5,3 +5,5 @@ map <Leader>n :set number!<CR>            " вкл. нумерацию стро�
 " list mode
 nmap <silent> <leader>lm :set list!<CR>
 
+" NERDTree toggle
+nnoremap <silent> <leader>t :NERDTreeToggle<CR>
