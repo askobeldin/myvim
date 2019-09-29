@@ -1,3 +1,3 @@
-set pfn=Liberation_Mono:h10:cRUSSIAN
+set pfn=Consolas:h10:cRUSSIAN
 set printoptions=left:12mm,right:12mm,top:12mm,bottom:12mm,header:2,syntax:n,wrap:y,paper:A4,duplex:off
 set pheader=%<%f%h%m%=pg.\ %N/%{line('$')/66+1}          " 66 - lines per page
