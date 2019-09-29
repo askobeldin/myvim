@@ -1,9 +1,15 @@
 #!/usr/bin/perl
 
-use 5.010;
-use strict;
-use warnings FATAL => 'all';
+use Modern::Perl;
 use utf8;
-# use open qw(:std :utf8);
-# use open OUT => ':locale';
+#binmode(STDOUT, ':utf8');
+use Encode::Locale;
+use Encode;
+
+if (-t) {
+    binmode(STDIN, ":encoding(console_in)");
+    binmode(STDOUT, ":encoding(console_out)");
+    binmode(STDERR, ":encoding(console_out)");
+}
+
 
