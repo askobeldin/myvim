@@ -18,7 +18,7 @@ cnoremap <C-n> <Down>
 " search for visually highlighted text
 vmap // y/<C-R>"<CR>
 
-" moving current or visually selected text lines up or down
+" moving current text line up or down
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
 inoremap <A-j> <Esc>:m .+1<CR>==gi
