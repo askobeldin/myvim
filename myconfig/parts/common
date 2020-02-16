@@ -94,7 +94,7 @@ set fencs=""
 
 set showtabline=1		" отображение закладок при открытии 2-х и более файлов ?
 
-colorscheme desert
+colorscheme oceandeep3
 
 
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
