@@ -1,6 +1,7 @@
 set wildmenu
 set wcm=<Tab>
 
+menu MyMenu.Listchars             :set list!<CR>
 menu MyMenu.Encoding.koi8-r       :e ++enc=KOI8-R<CR>
 menu MyMenu.Encoding.windows-1251 :e ++enc=cp1251<CR>
 menu MyMenu.Encoding.cp866        :e ++enc=cp866<CR>
@@ -8,4 +9,3 @@ menu MyMenu.Encoding.utf-8        :e ++enc=utf-8 <CR>
 menu MyMenu.Insert.LastChangeDate	msHmtgg/[Ll]ast[Cc]hange:\s*/e+1<CR>"_D"=strftime("%d %b %Y %X")<CR>p'tzt`s
 menu MyMenu.Insert.ThisFileName		msHmtgg/[Ff]ile:\s*/e+1<CR>"_D"=expand("%:p")<CR>p'tzt`s
 menu MyMenu.ClearSpaces ms:%s/\s\+$//e<CR>'s
-

@@ -36,7 +36,7 @@ set scrolloff=2
 set sidescrolloff=5
 set sidescroll=15
 " Nice :list or :set list
-set listchars=tab:>-,trail:.,extends:+,eol:$,precedes:+
+set listchars=tab:>-,trail:.,space:.,extends:+,eol:$,precedes:+
 
 set fillchars="vert: ,fold:-"
 

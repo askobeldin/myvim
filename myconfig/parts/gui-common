@@ -11,7 +11,7 @@ if has("gui")
 	if (has('win32') || has('win64'))
 		set guifont=Consolas:h10:cRUSSIAN
 	else
-		set guifont=Liberation\ Mono\ 10
+		set guifont=DejaVu\ Sans\ Mono\ 9
 	endif
 
     set guicursor=n-v-c:block-Cursor
