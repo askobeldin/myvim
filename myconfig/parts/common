@@ -16,8 +16,8 @@ set exrc
 " security for local directory
 set secure
 
-" mapleader 
-let mapleader = ","
+" mapleader is `space`
+let mapleader = " "
 
 set nostartofline
 
