@@ -27,3 +27,10 @@ Plugin 'SirVer/ultisnips'
 
 " Doxygen
 Plugin 'DoxygenToolkit.vim'
+
+" ctrlp.vim
+Plugin 'ctrlpvim/ctrlp.vim'
+
+" vim-markdown and tabular
+Plugin 'godlygeek/tabular'
+
