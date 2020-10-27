@@ -34,3 +34,5 @@ Plugin 'ctrlpvim/ctrlp.vim'
 " vim-markdown and tabular
 Plugin 'godlygeek/tabular'
 
+" vim-move
+Plugin 'matze/vim-move'
