@@ -51,7 +51,7 @@ augroup longLines
     autocmd!
     autocmd BufEnter * let &colorcolumn=""
     autocmd BufEnter *.py let &colorcolumn="80"
-    autocmd BufEnter *.lisp,*.cl,*.el,*.lsp let &colorcolumn="121"
+    autocmd BufEnter *.lisp,*.cl,*.el,*.lsp let &colorcolumn="101"
 augroup END
 
 " markdown files config
